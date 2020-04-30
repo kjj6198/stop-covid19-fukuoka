@@ -2,7 +2,6 @@
 require('svelte/register');
 const path = require('path');
 const express = require('express');
-const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 const getData = require('./getData');
 const AppComponent = require('../App.svelte').default;
@@ -17,15 +16,7 @@ app.use(express.static('public', { index: false }));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-if (process.env.NODE_ENV) {
-  app.use(
-    '/api',
-    createProxyMiddleware({
-      target: 'https://data.fukuokacovid.info/',
-      changeOrigin: false,
-    })
-  );
-} else {
+if (!process.env.NODE_ENV) {
   app.use('/api', devRoute);
 }
 

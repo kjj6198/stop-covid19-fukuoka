@@ -1,0 +1,659 @@
+{
+  "totalCount": 93,
+  "data": [
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/01/28",
+      "weekday": "火",
+      "case": "1"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/01/29",
+      "weekday": "水",
+      "case": "0"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/01/30",
+      "weekday": "木",
+      "case": "3"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/01/31",
+      "weekday": "金",
+      "case": "2"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/01",
+      "weekday": "土",
+      "case": "1"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/02",
+      "weekday": "日",
+      "case": "0"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/03",
+      "weekday": "月",
+      "case": "1"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/04",
+      "weekday": "火",
+      "case": "2"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/05",
+      "weekday": "水",
+      "case": "0"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/06",
+      "weekday": "木",
+      "case": "0"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/07",
+      "weekday": "金",
+      "case": "0"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/08",
+      "weekday": "土",
+      "case": "0"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/09",
+      "weekday": "日",
+      "case": "0"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/10",
+      "weekday": "月",
+      "case": "0"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/11",
+      "weekday": "火",
+      "case": "0"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/12",
+      "weekday": "水",
+      "case": "0"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/13",
+      "weekday": "木",
+      "case": "1"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/14",
+      "weekday": "金",
+      "case": "3"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/15",
+      "weekday": "土",
+      "case": "1"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/16",
+      "weekday": "日",
+      "case": "2"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/17",
+      "weekday": "月",
+      "case": "0"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/18",
+      "weekday": "火",
+      "case": "3"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/19",
+      "weekday": "水",
+      "case": "9"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/20",
+      "weekday": "木",
+      "case": "6"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/21",
+      "weekday": "金",
+      "case": "10"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/22",
+      "weekday": "土",
+      "case": "10"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/23",
+      "weekday": "日",
+      "case": "9"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/24",
+      "weekday": "月",
+      "case": "9"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/25",
+      "weekday": "火",
+      "case": "6"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/26",
+      "weekday": "水",
+      "case": "13"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/27",
+      "weekday": "木",
+      "case": "15"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/28",
+      "weekday": "金",
+      "case": "16"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/02/29",
+      "weekday": "土",
+      "case": "20"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/01",
+      "weekday": "日",
+      "case": "11"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/02",
+      "weekday": "月",
+      "case": "27"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/03",
+      "weekday": "火",
+      "case": "21"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/04",
+      "weekday": "水",
+      "case": "35"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/05",
+      "weekday": "木",
+      "case": "37"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/06",
+      "weekday": "金",
+      "case": "27"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/07",
+      "weekday": "土",
+      "case": "122"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/08",
+      "weekday": "日",
+      "case": "28"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/09",
+      "weekday": "月",
+      "case": "4"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/10",
+      "weekday": "火",
+      "case": "44"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/11",
+      "weekday": "水",
+      "case": "17"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/12",
+      "weekday": "木",
+      "case": "14"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/13",
+      "weekday": "金",
+      "case": "17"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/14",
+      "weekday": "土",
+      "case": "20"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/15",
+      "weekday": "日",
+      "case": "11"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/16",
+      "weekday": "月",
+      "case": "5"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/17",
+      "weekday": "火",
+      "case": "27"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/18",
+      "weekday": "水",
+      "case": "24"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/19",
+      "weekday": "木",
+      "case": "23"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/20",
+      "weekday": "金",
+      "case": "24"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/21",
+      "weekday": "土",
+      "case": "4"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/22",
+      "weekday": "日",
+      "case": "12"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/23",
+      "weekday": "月",
+      "case": "13"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/24",
+      "weekday": "火",
+      "case": "45"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/25",
+      "weekday": "水",
+      "case": "32"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/26",
+      "weekday": "木",
+      "case": "56"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/27",
+      "weekday": "金",
+      "case": "53"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/28",
+      "weekday": "土",
+      "case": "81"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/29",
+      "weekday": "日",
+      "case": "56"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/30",
+      "weekday": "月",
+      "case": "36"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/03/31",
+      "weekday": "火",
+      "case": "120"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/01",
+      "weekday": "水",
+      "case": "155"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/02",
+      "weekday": "木",
+      "case": "258"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/03",
+      "weekday": "金",
+      "case": "221"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/04",
+      "weekday": "土",
+      "case": "334"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/05",
+      "weekday": "日",
+      "case": "258"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/06",
+      "weekday": "月",
+      "case": "321"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/07",
+      "weekday": "火",
+      "case": "370"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/08",
+      "weekday": "水",
+      "case": "567"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/09",
+      "weekday": "木",
+      "case": "454"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/10",
+      "weekday": "金",
+      "case": "356"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/11",
+      "weekday": "土",
+      "case": "362"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/12",
+      "weekday": "日",
+      "case": "224"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/13",
+      "weekday": "月",
+      "case": "144"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/14",
+      "weekday": "火",
+      "case": "454"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/15",
+      "weekday": "水",
+      "case": "443"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/16",
+      "weekday": "木",
+      "case": "322"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/17",
+      "weekday": "金",
+      "case": "311"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/18",
+      "weekday": "土",
+      "case": "399"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/19",
+      "weekday": "日",
+      "case": "139"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/20",
+      "weekday": "月",
+      "case": "30"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/21",
+      "weekday": "火",
+      "case": "156"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/22",
+      "weekday": "水",
+      "case": "223"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/23",
+      "weekday": "木",
+      "case": "273"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/24",
+      "weekday": "金",
+      "case": "226"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/25",
+      "weekday": "土",
+      "case": "284"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/26",
+      "weekday": "日",
+      "case": "138"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/27",
+      "weekday": "月",
+      "case": "130"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/28",
+      "weekday": "火",
+      "case": "291"
+    },
+    {
+      "code": "400009",
+      "city": "",
+      "publishedAt": "2020/04/29",
+      "weekday": "水",
+      "case": "243"
+    }
+  ],
+  "hasNext": false,
+  "next": -1,
+  "limit": 1000
+}

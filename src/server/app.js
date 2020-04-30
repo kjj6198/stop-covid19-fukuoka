@@ -9,6 +9,7 @@ const AppComponent = require('../App.svelte').default;
 const { readable } = require('svelte/store');
 const { createTranslation, createLocale } = require('../stores/locale');
 const { ja, tw, en } = require('../i18n');
+const devRoute = require('./dev');
 
 app.disable('x-powered-by');
 
@@ -16,19 +17,17 @@ app.use(express.static('public', { index: false }));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(
-  '/api',
-  createProxyMiddleware({
-    target:
-      process.env.NODE_ENV === 'production'
-        ? 'http://fukuokacovid.info/'
-        : 'http://localhost:8081/',
-    pathRewrite: {
-      '/api': '',
-    },
-    changeOrigin: false,
-  })
-);
+if (process.env.NODE_ENV) {
+  app.use(
+    '/api',
+    createProxyMiddleware({
+      target: 'https://data.fukuokacovid.info/',
+      changeOrigin: false,
+    })
+  );
+} else {
+  app.use('/api', devRoute);
+}
 
 let cacheHTML = null;
 app.get('/', async (req, res, next) => {

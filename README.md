@@ -1,31 +1,18 @@
-## Store
+# Fukuoka COVID-19 Information
 
-```javascript
-const context = {};
-const context2 = {};
-const data = {
-  patients: {
-    status: 'loading',
-    entry: [],
-  },
-  exam: {
-    status: 'loading',
-    entry: [],
-  },
-  askCenter: {
-    status: 'loading',
-    entry: [],
-  },
-  summary: {
-    status: 'loading',
-    entry: [],
-  },
-};
+## How to run
 
-const prepareStore = (data) => {};
-```
+1. Clone this repository
+2. `npm install`
+3. `npm start` to start mock server and SSR.
 
-1. 初始化的時候去 add context 在 App (data)
-2. locale 的部分初始化的時候一樣用 context。
-3. 其實這樣就夠了，剩下的部分就讓 app 本身去煩惱。
-4. 看來還是要用 `window.store` 這招會比較好
+## How to develop
+
+1. You can run `npm start` to start mock server and `npm run dev` to start rollup.
+2. All assets would be placed in `/public` folder
+3. When you finished, create a pull request
+
+## Description
+
+This application is built on top of `svelte`. Keep in mind this is intended that I didn't introduce bunch of library
+because I want to save network traffic and make user open this application as soon as possible.

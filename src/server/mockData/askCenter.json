@@ -1,0 +1,680 @@
+{
+  "totalCount": 84,
+  "data": [
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/01/31",
+      "weekday": "金",
+      "case": "199"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/01",
+      "weekday": "土",
+      "case": "50"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/02",
+      "weekday": "日",
+      "case": "24"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/03",
+      "weekday": "月",
+      "case": "261"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/04",
+      "weekday": "火",
+      "case": "186"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/05",
+      "weekday": "水",
+      "case": "206"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/06",
+      "weekday": "木",
+      "case": "173"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/07",
+      "weekday": "金",
+      "case": "180"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/08",
+      "weekday": "土",
+      "case": "27"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/09",
+      "weekday": "日",
+      "case": "14"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/10",
+      "weekday": "月",
+      "case": "144"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/11",
+      "weekday": "火",
+      "case": "19"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/12",
+      "weekday": "水",
+      "case": "136"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/13",
+      "weekday": "木",
+      "case": "129"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/14",
+      "weekday": "金",
+      "case": "291"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/15",
+      "weekday": "土",
+      "case": "73"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/16",
+      "weekday": "日",
+      "case": "45"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/17",
+      "weekday": "月",
+      "case": "421"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/18",
+      "weekday": "火",
+      "case": "418"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/19",
+      "weekday": "水",
+      "case": "345"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/20",
+      "weekday": "木",
+      "case": "908"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/21",
+      "weekday": "金",
+      "case": "1107"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/22",
+      "weekday": "土",
+      "case": "563"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/23",
+      "weekday": "日",
+      "case": "437"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/24",
+      "weekday": "月",
+      "case": "622"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/25",
+      "weekday": "火",
+      "case": "1437"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/26",
+      "weekday": "水",
+      "case": "1279"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/27",
+      "weekday": "木",
+      "case": "1287"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/28",
+      "weekday": "金",
+      "case": "1172"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/02/29",
+      "weekday": "土",
+      "case": "520"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/01",
+      "weekday": "日",
+      "case": "519"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/02",
+      "weekday": "月",
+      "case": "1505"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/03",
+      "weekday": "火",
+      "case": "1117"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/04",
+      "weekday": "水",
+      "case": "1067"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/05",
+      "weekday": "木",
+      "case": "999"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/06",
+      "weekday": "金",
+      "case": "962"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/07",
+      "weekday": "土",
+      "case": "437"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/08",
+      "weekday": "日",
+      "case": "344"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/09",
+      "weekday": "月",
+      "case": "1076"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/10",
+      "weekday": "火",
+      "case": "862"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/11",
+      "weekday": "水",
+      "case": "760"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/12",
+      "weekday": "木",
+      "case": "733"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/13",
+      "weekday": "金",
+      "case": "792"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/14",
+      "weekday": "土",
+      "case": "405"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/15",
+      "weekday": "日",
+      "case": "300"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/16",
+      "weekday": "月",
+      "case": "920"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/17",
+      "weekday": "火",
+      "case": "694"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/18",
+      "weekday": "水",
+      "case": "752"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/19",
+      "weekday": "木",
+      "case": "740"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/20",
+      "weekday": "金",
+      "case": "304"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/21",
+      "weekday": "土",
+      "case": "404"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/22",
+      "weekday": "日",
+      "case": "248"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/23",
+      "weekday": "月",
+      "case": "829"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/24",
+      "weekday": "火",
+      "case": "822"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/25",
+      "weekday": "水",
+      "case": "1014"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/26",
+      "weekday": "木",
+      "case": "1015"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/27",
+      "weekday": "金",
+      "case": "1461"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/28",
+      "weekday": "土",
+      "case": "823"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/29",
+      "weekday": "日",
+      "case": "748"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/30",
+      "weekday": "月",
+      "case": "2420"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/03/31",
+      "weekday": "火",
+      "case": "2228"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/01",
+      "weekday": "水",
+      "case": "2823"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/02",
+      "weekday": "木",
+      "case": "2804"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/03",
+      "weekday": "金",
+      "case": "3026"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/04",
+      "weekday": "土",
+      "case": "1153"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/05",
+      "weekday": "日",
+      "case": "1012"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/06",
+      "weekday": "月",
+      "case": "3973"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/07",
+      "weekday": "火",
+      "case": "3405"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/08",
+      "weekday": "水",
+      "case": "3377"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/09",
+      "weekday": "木",
+      "case": "3290"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/10",
+      "weekday": "金",
+      "case": "3380"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/11",
+      "weekday": "土",
+      "case": "1317"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/12",
+      "weekday": "日",
+      "case": "1477"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/13",
+      "weekday": "月",
+      "case": "5664"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/14",
+      "weekday": "火",
+      "case": "4004"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/15",
+      "weekday": "水",
+      "case": "3784"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/16",
+      "weekday": "木",
+      "case": "4078"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/17",
+      "weekday": "金",
+      "case": "3886"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/18",
+      "weekday": "土",
+      "case": "1963"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/19",
+      "weekday": "日",
+      "case": "1763"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/20",
+      "weekday": "月",
+      "case": "4131"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/21",
+      "weekday": "火",
+      "case": "3315"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/22",
+      "weekday": "水",
+      "case": "3031"
+    },
+    {
+      "code": "400009",
+      "perf": "福岡県",
+      "city": "",
+      "publishedAt": "2020/04/23",
+      "weekday": "木",
+      "case": "3234"
+    }
+  ],
+  "hasNext": false,
+  "next": -1,
+  "limit": 1000
+}

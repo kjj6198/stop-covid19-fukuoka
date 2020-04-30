@@ -44,7 +44,7 @@ app.get('/', async (req, res, next) => {
     ]);
 
     const store = {
-      summary,
+      summary: summary[0],
       patients,
       askCenter,
       exam,

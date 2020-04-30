@@ -2,21 +2,38 @@
   import { countAccumulated } from './utils';
   import Provider from './Provider.svelte';
   import Chart from './Chart.svelte';
-  import Notice from './Notice.svelte';
+  import Navbar from './Navbar.svelte';
   import ChartContainer from './ChartContainer.svelte';
   import TopSummaryStat from './TopSummaryStat.svelte';
   import Table from './Table/Table.svelte';
   import ExternalLink from './ExternalLink.svelte';
   import Tab from './Tab.svelte';
-  import { detail } from './config';
+  import { createDetail } from './config';
 
   export let store;
+  export let locale;
+  export let t;
   let currentTab;
 
   let accumulated = {};
 </script>
 
 <style>
+  .github-logo {
+    width: 40px;
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+  .footer-logos {
+    text-align: center;
+  }
+
+  .twitter-logo {
+    width: 50px;
+  }
+
   .container {
     width: 95%;
     max-width: 1400px;
@@ -31,57 +48,75 @@
       'footer footer footer';
   }
 
+  @media (max-width: 680px) {
+    .container {
+      display: block;
+      width: 95%;
+      max-width: 100%;
+      font-size: 13px;
+    }
+
+    nav {
+    }
+  }
+
   nav {
     grid-area: nav;
   }
   main {
+    /* firefox */
+    max-width: 100%;
     grid-area: main;
   }
   footer {
     grid-area: footer;
+    font-size: 13px;
   }
 </style>
 
-<Provider {store}>
+<Provider {store} {locale} {t}>
   <div class="container">
     <nav>
-      <h3>福岡市新型冠狀肺炎感染情報</h3>
-      <Notice />
+      <h3>{$t('title')}</h3>
+      <Navbar />
     </nav>
     <main>
-      <h1>福岡県内での新型コロナウイルス情報サイト</h1>
+      <h1>{$t('title')}</h1>
 
       <p>
-        <strong>This is not official website.</strong>
-        Refer to
+        {$t('common.notice')}
         <ExternalLink
           href="https://www.pref.fukuoka.lg.jp/contents/covid19emergency-details.html"
-          title="offcial website" />
-        for more detail.
+          title={$t('common.official')} />
       </p>
 
       <TopSummaryStat />
 
-      <ChartContainer title="感染者">
+      <ChartContainer title={$t('title')}>
         <div slot="content">
           <div class="wrapper">
-            <Tab tabs={['日別', '累計']} let:current={currentTab}>
-              {#if currentTab === '日別'}
+            <Tab
+              tabs={[$t('infection.countByDay'), $t('infection.accumulated')]}
+              let:current={currentTab}>
+              {#if currentTab === $t('infection.countByDay')}
                 <Chart
+                  tooltipFormat={(d) => `${d}人`}
                   xTicks={[...new Set($store.patients.data.map((d) => d.publishedAt))]}
                   xTickFormat={(d) => d.replace('2020/', '')}
                   data={$store.patients.data}
                   groupByKey="publishedAt" />
-              {:else if currentTab === '累計'}
+              {:else if currentTab === $t('infection.accumulated')}
                 <Chart
                   xTicks={[...new Set($store.patients.data.map((d) => d.publishedAt))]}
+                  tooltipFormat={(d) => `${d}${$t('people')}`}
                   xTickFormat={(d) => d.replace('2020/', '')}
                   yTicks={[0, 100, 200, 300, 400, 500, 600, 700, 800, 900]}
+                  yAccessor={(d) => +d.total}
                   data={countAccumulated($store.patients.data)}>
                   <div slot="tooltip" let:data={accumulated}>
                     <h5>{accumulated.publishedAt}</h5>
                     <p>
-                      合計：{accumulated.total} (+{accumulated.total - accumulated.lastTime})
+                      {$t('common.total')}：{accumulated.total} (+{accumulated.total - accumulated.lastTime}){$t('common.people')}
                     </p>
                   </div>
                 </Chart>
@@ -89,53 +124,83 @@
             </Tab>
           </div>
         </div>
-        <div slot="footer">hello</div>
+        <div slot="footer">
+          <ExternalLink
+            title={$t('data.patients')}
+            href="https://ckan.open-governmentdata.org/dataset/401000_pref_fukuoka_covid19_patients" />
+        </div>
       </ChartContainer>
 
-      <ChartContainer title="感染者詳細">
+      <ChartContainer title={$t('infectionDetail.title')}>
         <div slot="content" style={`height: 500px; overflow-y: auto`}>
           <!-- since data becomes larger and larger, you might want to add paging...  -->
           <Table
             data={$store.patients.data}
-            config={detail}
-            title="感染者詳細一覧">
+            config={createDetail($t)}
+            title={$t('infectionDetail.title')}>
             <div slot="caption">
               <ExternalLink
-                title="詳しくは福岡公式サイトへ"
+                title={$t('link.checkDetail')}
                 href="https://www.pref.fukuoka.lg.jp/contents/covid19-hassei.html#0428" />
             </div>
           </Table>
         </div>
       </ChartContainer>
 
-      <ChartContainer title="検査実施数">
+      <ChartContainer title={$t('exam.title')}>
         <div slot="content">
           <Chart
             overflow
+            tooltipFormat={(d) => `${d.case}${$t('common.case')}`}
+            yAccessor={(d) => +d.case}
             xTicks={[...new Set($store.exam.data.map((d) => d.publishedAt))]}
             xTickFormat={(d) => d.replace('2020/', '')}
             yTicks={[0, 100, 200, 300, 400, 500, 600, 700]}
-            barWidth={5}
+            barWidth={9}
             data={$store.exam.data} />
+        </div>
+        <div slot="footer">
+          <ExternalLink
+            title={$t('data.exam')}
+            href="https://ckan.open-governmentdata.org/dataset/401000_pref_fukuoka_covid19_exam/resource/aab43191-40d0-4a6a-9724-a9030a596009" />
         </div>
       </ChartContainer>
 
-      <ChartContainer title="相談窓口数">
+      <ChartContainer title={$t('askCenter.title')}>
         <div slot="content">
           <Chart
             overflow
+            yAccessor={(d) => +d.case}
+            tooltipFormat={(d) => `${d.case}${$t('common.case')}`}
             xTicks={[...new Set($store.askCenter.data.map((d) => d.publishedAt))]}
             xTickFormat={(d) => d.replace('2020/', '')}
             yTicks={[0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000]}
-            barWidth={5}
+            barWidth={9}
             data={$store.askCenter.data} />
         </div>
+        <div slot="footer">
+          <ExternalLink
+            title={$t('data.askCenter')}
+            href="https://ckan.open-governmentdata.org/dataset/401000_pref_fukuoka_covid19_kikokusyasessyokusya" />
+        </div>
       </ChartContainer>
+
     </main>
     <footer>
-      這個網站是由 Kalan
-      製作。如果覺得有幫助的話請分享給更多人知道，有任何問題歡迎到 Twitter
-      上或是一起到 Github 修正問題，謝謝！
+      <div class="footer-logos">
+        <ExternalLink href="https://github.com/kjj6198/fukuoka-covid-info">
+          <img class="github-logo" alt="github-logo" src="/images/github.png" />
+        </ExternalLink>
+        <ExternalLink href="https://twitter.com/kalanyei">
+          <img
+            class="twitter-logo"
+            alt="twitter-logo"
+            src="/images/twitter.webp" />
+        </ExternalLink>
+      </div>
+      <div class="footer-text">
+        {@html $t('common.footer')}
+      </div>
     </footer>
   </div>
 </Provider>

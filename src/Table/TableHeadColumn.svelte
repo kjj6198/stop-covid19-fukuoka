@@ -57,7 +57,7 @@
     font-size: 18px;
     color: #424242;
     position: relative;
-    padding: 12px 9px;
+    padding: 8px;
     line-height: 1.67;
   }
 

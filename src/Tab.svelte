@@ -75,7 +75,7 @@
     bottom: 0;
     left: 0;
     display: inline-block;
-    background-color: #27cc95;
+    background-color: #005bad;
     height: 3px;
   }
 </style>

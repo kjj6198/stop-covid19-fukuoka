@@ -17,8 +17,10 @@
   }
 </style>
 
-<h3 id={title} class="title">{title}</h3>
-<div class="container">
-  <slot name="content" />
-  <slot name="footer" />
-</div>
+<section>
+  <h3 id={title} class="title">{title}</h3>
+  <div class="container">
+    <slot name="content" />
+    <slot name="footer" />
+  </div>
+</section>

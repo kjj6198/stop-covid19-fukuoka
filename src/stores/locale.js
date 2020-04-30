@@ -1,12 +1,30 @@
-import { writable } from 'svelte/store';
+const { writable, derived } = require('svelte/store');
 
-export function getUserLanguage(language, languages) {
-  const availableLang = ['zh-TW', 'zh', 'en', 'ja', 'jp', 'en-US', 'en-UK'];
-  if (availableLang.includes(language)) {
-    return language;
-  } else if (languages.length) {
-    return availableLang.includes(languages[0]) ? languages[0] : 'en';
-  }
-
-  return 'en';
+function createLocale(locale) {
+  return writable(locale);
 }
+
+function createTranslation(localeStore) {
+  return derived(localeStore, ($locale) => {
+    return function translationFn(key, ...interpolations) {
+      const parts = key.split('.');
+
+      const string = parts.reduce((acc, key) => {
+        return acc[key];
+      }, $locale);
+      if (interpolations.length) {
+        return string.replace(/\{(\d+)\}/g, function matchFn(match, group) {
+          const num = parseInt(group, 10);
+          return interpolations[num];
+        });
+      }
+
+      return string;
+    };
+  });
+}
+
+module.exports = {
+  createLocale,
+  createTranslation,
+};

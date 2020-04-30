@@ -7,6 +7,9 @@ const app = express();
 const getData = require('./getData');
 const AppComponent = require('../App.svelte').default;
 const { readable } = require('svelte/store');
+const { createTranslation, createLocale } = require('../stores/locale');
+const { ja, tw, en } = require('../i18n');
+
 app.disable('x-powered-by');
 
 app.use(express.static('public', { index: false }));
@@ -50,8 +53,17 @@ app.get('/', async (req, res, next) => {
       exam,
     };
 
+    const localeStore = createLocale(ja);
     const { html, head } = AppComponent.render({
-      store: readable(store),
+      store: readable({
+        ...store,
+        patients: {
+          ...store.patients,
+          data: store.patients.data.slice(0, 10),
+        },
+      }),
+      locale: localeStore,
+      t: createTranslation(localeStore),
     });
 
     res.render(
@@ -62,6 +74,11 @@ app.get('/', async (req, res, next) => {
         head,
         // for hydrate store
         store,
+        locale: {
+          tw,
+          ja,
+          en,
+        },
       },
       (err, html) => {
         if (err) {

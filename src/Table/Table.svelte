@@ -71,6 +71,10 @@
   }
 
   .tr:hover {
+    background-color: #ddd;
+  }
+
+  .tr:nth-child(even) {
     background-color: #efefef;
   }
 </style>

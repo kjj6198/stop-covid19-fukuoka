@@ -5,7 +5,10 @@
   import { scaleLinear, scaleBand } from 'd3-scale';
   import { groupBy } from './utils';
 
-  export let xTickFormat = (d) => d;
+  const identity = (d) => d;
+  export let xTickFormat = identity;
+  export let yAccessor = identity;
+  export let tooltipFormat = identity;
   export let yTicks = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45];
   export let xTicks = [];
   export let barWidth = 10;
@@ -87,10 +90,7 @@
   .container {
     overflow-x: auto;
   }
-  .container.overflow {
-    width: 2000px;
-    overflow-x: auto;
-  }
+
   svg {
     width: 100%;
     height: 350px;
@@ -106,6 +106,7 @@
   }
 
   .wrapper {
+    overflow-x: auto;
     position: relative;
   }
 
@@ -134,11 +135,10 @@
   <div
     bind:this={container}
     class="chart container"
+    class:overflow
     bind:clientWidth={width}
     bind:clientHeight={height}>
     <svg
-      class:overflow
-      overflow="auto"
       in:fade
       bind:this={svg}
       preserveAspectRatio="xMinYMid"
@@ -164,30 +164,32 @@
           {/each}
         </g>
         <!-- prevent initial rendering error -->
-        {#if height && groupByResult}
-          <g class="bars">
-            {#each Object.keys(groupByResult) as point, i}
-              <rect
-                on:mouseenter={handleMouseMove(point)}
-                fill="#005bad"
-                x={xScale(i)}
-                y={yScale(groupByResult[point].length)}
-                width={15}
-                height={height - padding.bottom - yScale(groupByResult[point].length)} />
-            {/each}
-          </g>
-        {:else}
-          <g class="bars">
-            {#each data as point, i}
-              <rect
-                on:mouseenter={handleMouseMove(point)}
-                fill="#005bad"
-                x={xScale(i)}
-                y={yScale(+point.case || +point.total)}
-                width={barWidth}
-                height={height - padding.bottom - yScale(+point.case || +point.total)} />
-            {/each}
-          </g>
+        {#if height}
+          {#if groupByResult}
+            <g class="bars">
+              {#each Object.keys(groupByResult) as point, i}
+                <rect
+                  on:mouseenter={handleMouseMove(point)}
+                  fill="#005bad"
+                  x={xScale(i)}
+                  y={yScale(groupByResult[point].length)}
+                  width={15}
+                  height={height - padding.bottom - yScale(groupByResult[point].length)} />
+              {/each}
+            </g>
+          {:else if data}
+            <g class="bars">
+              {#each data as point, i}
+                <rect
+                  on:mouseenter={handleMouseMove(point)}
+                  fill="#005bad"
+                  x={xScale(i)}
+                  y={yScale(yAccessor(point))}
+                  width={barWidth}
+                  height={height - padding.bottom - yScale(yAccessor(point))} />
+              {/each}
+            </g>
+          {/if}
         {/if}
       {/if}
     </svg>
@@ -201,10 +203,10 @@
         <!-- TODO: refactor it instead of hard-coded -->
         {#if groupByKey}
           <h5>{current}</h5>
-          <span>{groupByResult[current].length}</span>
+          <span>{tooltipFormat(groupByResult[current].length)}</span>
         {:else}
           <h5>{current.publishedAt}</h5>
-          <span>{current.case || current.total}</span>
+          <span>{tooltipFormat(current)}</span>
         {/if}
       </slot>
     </div>

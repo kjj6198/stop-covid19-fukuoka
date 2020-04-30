@@ -3,7 +3,7 @@ const request = require('request');
 const getData = (url, options) => {
   return new Promise((resolve, reject) => {
     request.get(
-      process.env.NODE_ENV !== 'production'
+      process.env.NODE_ENV === 'production'
         ? 'http://fukuokacovid.info/api' + url
         : 'http://localhost:8080/api' + url,
       options,

@@ -24,7 +24,7 @@ const detail = {
   hasDischarged: {
     name: '退院',
     sortable: true,
-    comparator: (a, b) => (b === '1' ? 1 : 0),
+    comparator: (a, b) => (b === '1' ? 1 : -1),
     formatter: (text) =>
       text === '1'
         ? // TODO: extract

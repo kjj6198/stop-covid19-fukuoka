@@ -17,7 +17,7 @@
   }
 </style>
 
-<h3 class="title">{title}</h3>
+<h3 id={title} class="title">{title}</h3>
 <div class="container">
   <slot name="content" />
   <slot name="footer" />

@@ -1,6 +1,6 @@
-import groupBy from './groupBy';
+const groupBy = require('./groupBy');
 
-export default function countAccumalated(data) {
+function countAccumalated(data) {
   const groupedData = groupBy(data, 'publishedAt');
 
   const dataArr = Object.values(groupedData);
@@ -18,3 +18,5 @@ export default function countAccumalated(data) {
 
   return result;
 }
+
+module.exports = countAccumalated;

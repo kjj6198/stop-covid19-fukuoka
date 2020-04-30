@@ -1,4 +1,4 @@
-export default function groupBy(data, key) {
+function groupBy(data, key) {
   const result = {};
   data.forEach((d) => {
     if (result[d[key]]) {
@@ -10,3 +10,5 @@ export default function groupBy(data, key) {
 
   return result;
 }
+
+module.exports = groupBy;

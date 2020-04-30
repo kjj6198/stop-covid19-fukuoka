@@ -79,6 +79,7 @@
 </style>
 
 <th
+  scope="col"
   data-field={field}
   class={className}
   class:hideMobile

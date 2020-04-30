@@ -3,15 +3,19 @@
   import { fade } from 'svelte/transition';
   import { elasticIn } from 'svelte/easing';
   import { scaleLinear, scaleBand } from 'd3-scale';
-  import groupBy from './utils/groupBy';
+  import { groupBy } from './utils';
+
+  export let xTickFormat = (d) => d;
   export let yTicks = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45];
+  export let xTicks = [];
   export let barWidth = 10;
   export let data = [];
+  export let overflow = false;
   export let groupByKey = '';
   export let padding = {
-    top: 20,
+    top: 50,
     bottom: 50,
-    left: 25,
+    left: 45,
     right: 15
   };
 
@@ -19,13 +23,20 @@
   let container;
   let width = 0;
   let height = 0;
+  let mounted = false;
   const store = getContext('store');
 
+  onMount(() => {
+    // for initial time and SSR
+    mounted = true;
+  });
+
   $: groupByResult = groupByKey ? groupBy(data, groupByKey) : null;
-  $: xTicks = [...new Set(data.map((d) => d.publishedAt))];
+
   $: xScale = scaleLinear()
     .domain([0, xTicks.length])
-    .range([padding.left, width - padding.right]);
+    .range([padding.left, overflow ? 2000 : width - padding.right]);
+
   $: yScale = scaleLinear()
     .domain([
       0,
@@ -60,8 +71,9 @@
       current = point;
       showTooltip = true;
       e.stopPropagation();
+      const scrollLeft = container.scrollLeft;
       const box = e.target.getBBox();
-      x = box.x;
+      x = box.x - scrollLeft;
       y = box.y;
     };
   }
@@ -73,6 +85,10 @@
 
 <style>
   .container {
+    overflow-x: auto;
+  }
+  .container.overflow {
+    width: 2000px;
     overflow-x: auto;
   }
   svg {
@@ -108,6 +124,10 @@
     color: #fff;
     font-size: 12px;
   }
+
+  .overflow {
+    width: 2000px;
+  }
 </style>
 
 <div class="wrapper">
@@ -117,57 +137,64 @@
     bind:clientWidth={width}
     bind:clientHeight={height}>
     <svg
+      class:overflow
+      overflow="auto"
+      in:fade
       bind:this={svg}
       preserveAspectRatio="xMinYMid"
       on:mouseleave={handleMouseLeave}>
-      <g class="axis y-axis" transform="translate(0, 0)">
-        {#each yTicks as tick}
-          <g class="tick tick-{tick}" transform="translate(0, {yScale(tick)})">
-            <line x2="100%" />
-            <text y="4">{tick}</text>
-          </g>
-        {/each}
-      </g>
-      <g class="axis x-axis">
-        {#each xTicks as point, i}
-          <g
-            class="tick"
-            transform="translate({xScale(i)},{height - padding.bottom + 5})">
-            <text transform="rotate(90)">{point.replace('2020/', '')}</text>
-          </g>
-        {/each}
-      </g>
-      <!-- prevent initial rendering error -->
-      {#if height && groupByResult}
-        <g class="bars">
-          {#each Object.keys(groupByResult) as point, i}
-            <rect
-              on:mouseenter={handleMouseMove(point)}
-              fill="#005bad"
-              x={xScale(i)}
-              y={yScale(groupByResult[point].length)}
-              width={15}
-              height={height - padding.bottom - yScale(groupByResult[point].length)} />
+      {#if mounted}
+        <g class="axis y-axis" transform="translate(0, 0)">
+          {#each yTicks as tick}
+            <g
+              class="tick tick-{tick}"
+              transform="translate(0, {yScale(tick)})">
+              <line x2="100%" />
+              <text y="4">{tick}</text>
+            </g>
           {/each}
         </g>
-      {:else}
-        <g class="bars">
-          {#each data as point, i}
-            <rect
-              on:mouseenter={handleMouseMove(point)}
-              fill="#005bad"
-              x={xScale(i)}
-              y={yScale(+point.case || +point.total)}
-              width={barWidth}
-              height={height - padding.bottom - yScale(+point.case || +point.total)} />
+        <g class="axis x-axis">
+          {#each xTicks as point, i}
+            <g
+              class="tick"
+              transform="translate({xScale(i)},{height - padding.bottom + 5})">
+              <text transform="rotate(90)">{xTickFormat(point, i)}</text>
+            </g>
           {/each}
         </g>
+        <!-- prevent initial rendering error -->
+        {#if height && groupByResult}
+          <g class="bars">
+            {#each Object.keys(groupByResult) as point, i}
+              <rect
+                on:mouseenter={handleMouseMove(point)}
+                fill="#005bad"
+                x={xScale(i)}
+                y={yScale(groupByResult[point].length)}
+                width={15}
+                height={height - padding.bottom - yScale(groupByResult[point].length)} />
+            {/each}
+          </g>
+        {:else}
+          <g class="bars">
+            {#each data as point, i}
+              <rect
+                on:mouseenter={handleMouseMove(point)}
+                fill="#005bad"
+                x={xScale(i)}
+                y={yScale(+point.case || +point.total)}
+                width={barWidth}
+                height={height - padding.bottom - yScale(+point.case || +point.total)} />
+            {/each}
+          </g>
+        {/if}
       {/if}
     </svg>
   </div>
   {#if showTooltip}
     <div
-      transition:fade
+      transition:fade={{ duration: 250 }}
       class="tooltip"
       style={`transform: translate(${Math.round(x - 20)}px, ${Math.round(y) - 50}px)`}>
       <slot name="tooltip" data={current}>

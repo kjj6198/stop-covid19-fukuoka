@@ -6,8 +6,9 @@
 </script>
 
 <style>
-  span {
-    vertical-align: middle;
+  svg {
+    width: 1em;
+    height: 1em;
   }
 </style>
 

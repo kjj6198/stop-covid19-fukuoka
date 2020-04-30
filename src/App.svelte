@@ -75,6 +75,7 @@
 </style>
 
 <svelte:head>
+  <title>({$store.summary.total}) {$t('title')}({$store.summary.total})</title>
   <meta
     property="description"
     content={$t('meta.description', $store.summary.total)} />
@@ -85,7 +86,6 @@
     content={$t('meta.description', $store.summary.total)} />
   <meta property="og:type" content="website" />
   <meta property="og:title" content={$t('title')} />
-
 </svelte:head>
 
 <Provider {store} {locale} {t}>

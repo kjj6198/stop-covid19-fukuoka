@@ -1,0 +1,3 @@
+service: stop-fukuoka-covid-frontend
+runtime: nodejs
+env: flex

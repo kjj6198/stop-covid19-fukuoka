@@ -2,10 +2,10 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "scripts": {
-    "start:server": "node ./src/server/app.js",
+    "prepare": "npm run build",
+    "start": "node ./src/server/app.js",
     "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public"
+    "dev": "rollup -c -w"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",

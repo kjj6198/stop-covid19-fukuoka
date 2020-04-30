@@ -82,7 +82,6 @@ app.get('/', async (req, res, next) => {
       {
         html,
         lang: acceptLang || 'zh-TW',
-        title: `(${store.summary.total}) ${lang.title}`,
         head,
         // for hydrate store
         store,

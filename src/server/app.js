@@ -16,7 +16,7 @@ app.use(express.static('public', { index: false }));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-if (!process.env.NODE_ENV) {
+if (process.env.NODE_ENV !== 'production') {
   app.use('/api', devRoute);
 }
 

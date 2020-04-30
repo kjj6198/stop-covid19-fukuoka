@@ -20,14 +20,7 @@ if (!process.env.NODE_ENV) {
   app.use('/api', devRoute);
 }
 
-let cacheHTML = null;
 app.get('/', async (req, res, next) => {
-  if (cacheHTML) {
-    res.status(200).send(cacheHTML);
-    res.end();
-    return;
-  }
-
   try {
     const [summary, patients, askCenter, exam] = await Promise.all([
       getData('/summary'),
@@ -86,10 +79,6 @@ app.get('/', async (req, res, next) => {
           next(err);
           return;
         }
-        if (process.env.NODE_ENV === 'production') {
-          cacheHTML = html;
-        }
-
         res.send(html).end();
       }
     );

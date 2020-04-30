@@ -53,7 +53,18 @@ app.get('/', async (req, res, next) => {
       exam,
     };
 
-    const localeStore = createLocale(ja);
+    const acceptLang = req.acceptsLanguages(['zh-TW', 'ja', 'en-US', 'en-UK']);
+    const lang = {
+      'zh-TW': tw,
+      'zh-CN': tw,
+      hant: tw,
+      ja: ja,
+      en: en,
+      'en-UK': en,
+      'en-US': en,
+    }[acceptLang || 'zh-TW'];
+
+    const localeStore = createLocale(lang);
     const { html, head } = AppComponent.render({
       store: readable({
         ...store,
@@ -70,7 +81,8 @@ app.get('/', async (req, res, next) => {
       'index',
       {
         html,
-        title: '',
+        lang: acceptLang || 'zh-TW',
+        title: `(${store.summary.total}) ${lang.title}`,
         head,
         // for hydrate store
         store,

@@ -1,5 +1,9 @@
 const translation = {
   title: 'Fukuoka COVID-19 Information',
+  meta: {
+    description:
+      'This website tracks Fukuoka COVID-19 information. Currently ({0}) patients',
+  },
   common: {
     languages: 'Select Language',
     total: 'total',

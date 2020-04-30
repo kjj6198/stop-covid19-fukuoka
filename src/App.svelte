@@ -74,6 +74,20 @@
   }
 </style>
 
+<svelte:head>
+  <meta
+    property="description"
+    content={$t('meta.description', $store.summary.total)} />
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:creator" content="@kalanyei" />
+  <meta
+    property="og:description"
+    content={$t('meta.description', $store.summary.total)} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={$t('title')} />
+
+</svelte:head>
+
 <Provider {store} {locale} {t}>
   <div class="container">
     <nav>
@@ -81,7 +95,10 @@
       <Navbar />
     </nav>
     <main>
-      <h1>{$t('title')}</h1>
+      <h1>
+        <img alt="covid-19" src="/favicon.png" />
+        {$t('title')}
+      </h1>
 
       <p>
         {$t('common.notice')}
@@ -200,6 +217,18 @@
       </div>
       <div class="footer-text">
         {@html $t('common.footer')}
+        <p>
+          favicon / coronavirus icon is made by
+          <a
+            href="https://www.flaticon.com/authors/smashicons"
+            title="Smashicons">
+            Smashicons
+          </a>
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon">
+            www.flaticon.com
+          </a>
+        </p>
       </div>
     </footer>
   </div>

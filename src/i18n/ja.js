@@ -1,5 +1,9 @@
 const translation = {
   title: '福岡県新型コロナウイルス感染情報',
+  meta: {
+    description:
+      'このサイトは福岡県での新型コロナウイルスの感染情報をお伝えします。今感染者合計({0})人です',
+  },
   common: {
     languages: '言語',
     total: '合計',
@@ -8,6 +12,8 @@ const translation = {
       'こちらは公式サイトではありません。公式サイトを参考したい方は福岡市政府公式サイトへ',
     case: '件',
     people: '人',
+    footer:
+      'このサイトは<a href="https://twitter.com/kalanyei">Kalan</a>から作りました。役に立てると幸いです。<a href="https://github.com/kjj6198/fukuoka-covid">Github</a>',
   },
   link: {
     title: '重要事項とリンク先',

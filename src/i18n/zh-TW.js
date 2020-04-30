@@ -1,5 +1,9 @@
 const translation = {
   title: '福岡縣新型冠狀肺炎感染情報',
+  meta: {
+    description:
+      '本網站追蹤並顯示福岡縣新型冠狀肺炎感染的相關情報，目前共有 ({0}) 位感染者',
+  },
   common: {
     total: '合計',
     official: '連結',

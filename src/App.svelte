@@ -102,6 +102,7 @@
 
 <svelte:head>
   <title>({$store.summary.total}) {$t('title')}({$store.summary.total})</title>
+  <meta property="og:url" content="https://fukuokacovid.info" />
   <meta
     property="description"
     content={$t('meta.description', $store.summary.total)} />

@@ -35,14 +35,6 @@
   .twitter-logo {
     width: 50px;
   }
-  @media (max-width: 680px) {
-    .github-logo {
-      width: 25px;
-    }
-    .twitter-logo {
-      width: 30px;
-    }
-  }
 
   .footer-text {
     text-align: center;
@@ -96,6 +88,13 @@
 
     nav {
       margin-bottom: 20px;
+    }
+
+    .github-logo {
+      width: 25px;
+    }
+    .twitter-logo {
+      width: 30px;
     }
   }
 </style>

@@ -1,4 +1,4 @@
-# Fukuoka COVID-19 Information
+# Fukuoka COVID-19 Information ![Build and Deploy to App Engine](https://github.com/kjj6198/stop-covid19-fukuoka/workflows/Build%20and%20Deploy%20to%20App%20Engine/badge.svg?branch=master&event=push)
 
 ## How to run
 

@@ -100,7 +100,7 @@
 </style>
 
 <svelte:head>
-  <title>({$store.summary.total}) {$t('title')}({$store.summary.total})</title>
+  <title>({$store.summary.total}) {$t('title')}</title>
   <meta property="og:url" content="https://fukuokacovid.info" />
   <meta
     property="description"
@@ -111,7 +111,13 @@
     property="og:description"
     content={$t('meta.description', $store.summary.total)} />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content={$t('title')} />
+  <meta
+    property="og:title"
+    content={`(${$store.summary.total}) ${$t('title')}`} />
+  <meta property="og:image" content="/cover.jpg" />
+  <meta
+    property="og:title"
+    content={`(${$store.summary.total}) ${$t('title')}`} />
 </svelte:head>
 
 <svelte:window on:resize={handleResize} />

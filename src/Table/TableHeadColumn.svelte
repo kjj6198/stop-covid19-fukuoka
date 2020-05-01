@@ -47,11 +47,6 @@
 </script>
 
 <style>
-  @media (max-width: 680px) {
-    .hideMobile {
-      display: none;
-    }
-  }
   td,
   th {
     font-size: 18px;
@@ -61,6 +56,16 @@
     line-height: 1.67;
   }
 
+  @media (max-width: 680px) {
+    .hideMobile {
+      display: none;
+    }
+
+    td,
+    th {
+      font-size: 12px;
+    }
+  }
   .align-right {
     text-align: right;
   }

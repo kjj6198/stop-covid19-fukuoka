@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte';
   import { countAccumulated, formatNumber } from './utils';
   import Provider from './Provider.svelte';
   import Chart from './Chart.svelte';
@@ -16,11 +17,31 @@
   let currentTab;
 
   let accumulated = {};
+
+  let isMobile = false;
+  onMount(() => {
+    isMobile = matchMedia(`(max-width: 680px)`).matches;
+  });
+
+  const handleResize = () => {
+    isMobile = matchMedia(`(max-width: 680px)`).matches;
+  };
 </script>
 
 <style>
   .github-logo {
     width: 40px;
+  }
+  .twitter-logo {
+    width: 50px;
+  }
+  @media (max-width: 680px) {
+    .github-logo {
+      width: 25px;
+    }
+    .twitter-logo {
+      width: 30px;
+    }
   }
 
   .footer-text {
@@ -28,10 +49,6 @@
   }
   .footer-logos {
     text-align: center;
-  }
-
-  .twitter-logo {
-    width: 50px;
   }
 
   .container {
@@ -48,18 +65,6 @@
       'footer footer footer';
   }
 
-  @media (max-width: 680px) {
-    .container {
-      display: block;
-      width: 95%;
-      max-width: 100%;
-      font-size: 13px;
-    }
-
-    nav {
-    }
-  }
-
   nav {
     grid-area: nav;
   }
@@ -71,6 +76,27 @@
   footer {
     grid-area: footer;
     font-size: 13px;
+  }
+
+  @media (max-width: 680px) {
+    .container {
+      display: block;
+      width: 95%;
+      max-width: 100%;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: 18px;
+    }
+
+    h1 > img {
+      width: 30px;
+    }
+
+    nav {
+      margin-bottom: 20px;
+    }
   }
 </style>
 
@@ -87,6 +113,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content={$t('title')} />
 </svelte:head>
+
+<svelte:window on:resize={handleResize} />
 
 <Provider {store} {locale} {t}>
   <div class="container">
@@ -118,13 +146,17 @@
               {#if currentTab === $t('infection.countByDay')}
                 <Chart
                   tooltipFormat={(d) => `${d}人`}
-                  xTicks={[...new Set($store.patients.data.map((d) => d.publishedAt))]}
+                  xTicks={[...new Set($store.patients.data.map((d, i) => d.publishedAt))].map(
+                    (p, i) => (isMobile ? (i % 5 === 0 ? p : '') : p)
+                  )}
                   xTickFormat={(d) => d.replace('2020/', '')}
                   data={$store.patients.data}
                   groupByKey="publishedAt" />
               {:else if currentTab === $t('infection.accumulated')}
                 <Chart
-                  xTicks={[...new Set($store.patients.data.map((d) => d.publishedAt))]}
+                  xTicks={[...new Set($store.patients.data.map((d) => d.publishedAt))].map(
+                    (p, i) => (isMobile ? (i % 5 === 0 ? p : '') : p)
+                  )}
                   tooltipFormat={(d) => `${d}${$t('people')}`}
                   xTickFormat={(d) => d.replace('2020/', '')}
                   yTicks={[0, 100, 200, 300, 400, 500, 600, 700, 800, 900]}
@@ -205,7 +237,7 @@
     </main>
     <footer>
       <div class="footer-logos">
-        <ExternalLink href="https://github.com/kjj6198/fukuoka-covid-info">
+        <ExternalLink href="https://github.com/kjj6198/stop-covid19-fukuoka">
           <img class="github-logo" alt="github-logo" src="/images/github.png" />
         </ExternalLink>
         <ExternalLink href="https://twitter.com/kalanyei">

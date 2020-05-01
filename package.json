@@ -5,6 +5,7 @@
     "prepare": "npm run build",
     "start": "node ./src/server/app.js",
     "start:dev": "sirv public",
+    "gcp-build": "npm run build",
     "build": "rollup -c",
     "dev": "rollup -c -w"
   },

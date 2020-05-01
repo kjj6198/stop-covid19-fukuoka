@@ -16,3 +16,11 @@
 
 This application is built on top of `svelte`. Keep in mind this is intended that I didn't introduce bunch of library
 because I want to save network traffic and make user open this application as soon as possible.
+
+## Contributuers
+
+## LICENSE
+
+MIT
+
+While it's always welcomed to fork and create your own version, please link back to [original website](https://fukuokacovid.info) and expose my name *Kalan* on your repository, website.

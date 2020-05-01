@@ -11,6 +11,7 @@ const AppComponent = require('../App.svelte').default;
 const getData = require('./getData');
 const { ja, tw, en } = require('../i18n');
 const devRoute = require('./dev');
+const botUAReg = require('./botUA');
 
 app.disable('x-powered-by');
 
@@ -65,6 +66,14 @@ app.get('/', async (req, res, next) => {
       locale: localeStore,
       t: createTranslation(localeStore),
     });
+
+    const ua = req.get('User-Agent');
+    if (ua) {
+      if (botUAReg.test(ua)) {
+        res.render('bot', { lang: acceptLang || 'zh-TW', head });
+        return;
+      }
+    }
 
     res.render(
       'index',

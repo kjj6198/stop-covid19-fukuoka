@@ -1,6 +1,6 @@
 service: default
-runtime: nodejs
-env: flex
+runtime: nodejs10
+env: standard
 
 env_variables:
   CDN_URL: https://d2c4jkl18wvl8p.cloudfront.net

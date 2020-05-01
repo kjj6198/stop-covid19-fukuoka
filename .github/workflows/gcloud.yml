@@ -28,4 +28,4 @@ jobs:
         run: |-
           echo $SERVICE_ACCOUNT > /tmp/key.json && \
           gcloud auth activate-service-account --key-file /tmp/key.json && \
-          gcloud app deploy --project "$PROJECT_ID"
+          gcloud app deploy --project "$PROJECT_ID" --no-promote

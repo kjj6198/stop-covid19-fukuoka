@@ -212,7 +212,7 @@
           <img
             class="twitter-logo"
             alt="twitter-logo"
-            src="/images/twitter.webp" />
+            src="/images/twitter.png" />
         </ExternalLink>
       </div>
       <div class="footer-text">

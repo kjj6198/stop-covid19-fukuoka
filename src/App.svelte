@@ -269,6 +269,10 @@
             www.flaticon.com
           </a>
         </p>
+        <p>
+          Cover Icon made by Shabna Ashraf from
+          <a href="www.freeicons.io">www.freeicons.io</a>
+        </p>
       </div>
     </footer>
   </div>

@@ -117,9 +117,6 @@
   <meta
     property="og:image"
     content="https://fukuokacovid.info/images/cover.jpg" />
-  <meta
-    property="og:title"
-    content={`(${$store.summary.total}) ${$t('title')}`} />
 </svelte:head>
 
 <svelte:window on:resize={handleResize} />

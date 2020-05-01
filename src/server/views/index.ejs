@@ -13,11 +13,11 @@
     <div id="app">
       <%- html %>
     </div>
-  </body>
 
-  <script id="ssrStore">
-    window.store = <%- JSON.stringify(store) %>
-    window.locale = <%- JSON.stringify(locale) %>
-  </script>
-  <script defer src="/build/bundle.js"></script>
+    <script id="ssrStore">
+      window.store = <%- JSON.stringify(store) %>
+      window.locale = <%- JSON.stringify(locale) %>
+    </script>
+    <script defer src="/build/bundle.js"></script>
+  </body>
 </html>

@@ -2,7 +2,7 @@
   import { onMount, getContext } from 'svelte';
   import { fade } from 'svelte/transition';
   import { elasticIn } from 'svelte/easing';
-  import { scaleLinear, scaleBand } from 'd3-scale';
+  import { scaleLinear } from 'd3-scale';
   import { groupBy } from './utils';
 
   const identity = (d) => d;

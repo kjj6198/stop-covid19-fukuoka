@@ -7,6 +7,8 @@ on:
     paths-ignore:
       - 'docs/**'
       - 'README.md'
+      - 'LICENSE'
+      - 'CONTRIBUTING.md'
 env:
   PROJECT_ID: ${{ secrets.PROJECT_ID }}
   RUN_REGION: asia-northeast2

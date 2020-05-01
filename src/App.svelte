@@ -270,8 +270,13 @@
           </a>
         </p>
         <p>
-          Cover Icon made by Shabna Ashraf from
-          <a href="www.freeicons.io">www.freeicons.io</a>
+          Cover Icon made by
+          <a
+            href="https://www.freeicons.io/corona-virus-precautions-3/wear-face-mask-icon-39341">
+            Shabna Ashraf
+          </a>
+          from
+          <a href="https://www.freeicons.io">www.freeicons.io</a>
         </p>
       </div>
     </footer>

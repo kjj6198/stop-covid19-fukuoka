@@ -15,7 +15,7 @@ const devRoute = require('./dev');
 app.disable('x-powered-by');
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(compression());
+  app.use(compression({ level: 6 }));
 }
 
 app.use(express.static('public', { index: false }));

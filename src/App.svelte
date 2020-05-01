@@ -1,5 +1,5 @@
 <script>
-  import { countAccumulated } from './utils';
+  import { countAccumulated, formatNumber } from './utils';
   import Provider from './Provider.svelte';
   import Chart from './Chart.svelte';
   import Navbar from './Navbar.svelte';
@@ -168,7 +168,7 @@
         <div slot="content">
           <Chart
             overflow
-            tooltipFormat={(d) => `${d.case}${$t('common.case')}`}
+            tooltipFormat={(d) => `${formatNumber(+d.case)}${$t('common.case')}`}
             yAccessor={(d) => +d.case}
             xTicks={[...new Set($store.exam.data.map((d) => d.publishedAt))]}
             xTickFormat={(d) => d.replace('2020/', '')}
@@ -188,7 +188,7 @@
           <Chart
             overflow
             yAccessor={(d) => +d.case}
-            tooltipFormat={(d) => `${d.case}${$t('common.case')}`}
+            tooltipFormat={(d) => `${formatNumber(+d.case)}${$t('common.case')}`}
             xTicks={[...new Set($store.askCenter.data.map((d) => d.publishedAt))]}
             xTickFormat={(d) => d.replace('2020/', '')}
             yTicks={[0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000]}

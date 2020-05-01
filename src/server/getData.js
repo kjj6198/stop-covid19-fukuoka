@@ -2,12 +2,32 @@ const request = require('request');
 
 const getData = (url, options) => {
   return new Promise((resolve, reject) => {
-    request.get(
-      process.env.NODE_ENV === 'production'
-        ? 'http://fukuokacovid.info/api' + url
-        : 'http://localhost:8080/api' + url,
-      options,
-      function handler(err, response, body) {
+    if (process.env.NODE_ENV === 'production') {
+      request.get(process.env.CDN_URL + url + '.json', function handler(
+        err,
+        response,
+        body
+      ) {
+        if (err) {
+          reject(err);
+        } else {
+          const data = JSON.parse(body);
+          if (url === '/summary') {
+            resolve(data);
+          } else {
+            resolve({
+              totalCount: data.length,
+              data,
+            });
+          }
+        }
+      });
+    } else {
+      request.get('http://localhost:8080/api' + url, options, function handler(
+        err,
+        response,
+        body
+      ) {
         if (err) {
           reject(err);
         } else {
@@ -18,8 +38,8 @@ const getData = (url, options) => {
             reject(err);
           }
         }
-      }
-    );
+      });
+    }
   });
 };
 

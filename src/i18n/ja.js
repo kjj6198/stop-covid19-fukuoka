@@ -22,6 +22,7 @@ const translation = {
     tokyo: '東京新型コロナウイルス感染症対策サイト',
     fukuoka: '新型冠狀病毒對策網站（福岡）',
     checkDetail: '詳しくは福岡公式サイトへ',
+    cashHandout: '特別定額給付金',
   },
   data: {
     patients: 'Fukuoka Open Data - 新型コロナウイルス感染症　陽性患者発表情報',

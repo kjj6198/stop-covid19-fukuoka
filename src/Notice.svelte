@@ -82,6 +82,17 @@
         href="https://fukuoka.stopcovid19.jp/"
         title={$t('link.fukuoka')} />
     </li>
+    <li>
+      <ExternalLink
+        href="https://fukuoka.stopcovid19.jp/"
+        title={$t('link.fukuoka')} />
+    </li>
+
+    <li>
+      <ExternalLink
+        href="https://kyufukin.soumu.go.jp/ja-JP/apply/"
+        title={$t('link.cashHandout')} />
+    </li>
   </ul>
   <hr />
 </div>

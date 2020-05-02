@@ -22,6 +22,7 @@ const translation = {
     tokyo: 'COVID-19 Tokyo Information Website',
     fukuoka: 'COVID-19 Fukuoka Information Website',
     checkDetail: 'Check out more details on Fukuoka official website.',
+    cashHandout: 'Cash Handout (Japanese)',
   },
   data: {
     patients: 'Fukuoka Open Data - COVID-19 Patients Information',

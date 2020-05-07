@@ -4,7 +4,7 @@ const getData = (url, options) => {
   return new Promise((resolve, reject) => {
     if (process.env.NODE_ENV === 'production') {
       request.get(
-        process.env.CDN_URL + url + `?now=${Date.now()}` + '.json',
+        process.env.CDN_URL + url + `.json?now=${Date.now()}`,
         function handler(err, response, body) {
           if (err) {
             reject(err);

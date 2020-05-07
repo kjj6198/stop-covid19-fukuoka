@@ -5,6 +5,8 @@ const translation = {
       'This website tracks Fukuoka COVID-19 information. Currently ({0}) patients',
   },
   common: {
+    fukuoka: 'Switch to Fukuoka City',
+    fukuokaPerf: 'Switch to Fukuoka Perf',
     languages: 'Select Language',
     total: 'total',
     official: 'link',

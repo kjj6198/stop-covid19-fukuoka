@@ -10,7 +10,7 @@ const getData = (url, options) => {
             reject(err);
           } else {
             const data = JSON.parse(body);
-            if (url === '/summary') {
+            if (url === '/summary' || url === '/summary-fukuoka') {
               resolve(data);
             } else {
               resolve({

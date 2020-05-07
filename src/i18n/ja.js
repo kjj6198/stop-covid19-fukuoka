@@ -5,6 +5,8 @@ const translation = {
       'このサイトは福岡県での新型コロナウイルスの感染情報をお伝えします。今感染者合計({0})人です',
   },
   common: {
+    fukuoka: '福岡市の資料だけ表示する',
+    fukuokaPerf: '福岡県の資料を表示する',
     languages: '言語',
     total: '合計',
     official: 'リンク',

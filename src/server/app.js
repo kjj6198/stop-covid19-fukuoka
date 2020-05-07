@@ -28,27 +28,54 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 app.get('/', async (req, res, next) => {
+  const { q = '' } = req.query;
+
   try {
-    const [summary, patients, askCenter, exam] = await Promise.all([
-      getData('/summary'),
-      getData('/patients'),
-      getData('/askCenter'),
-      getData('/exam'),
+    let store = {};
+
+    if (q === 'fukuoka') {
+      const [summary, patients, askCenter, exam] = await Promise.all([
+        getData('/summary-fukuoka'),
+        getData('/patients-fukuoka'),
+        getData('/askCenter-fukuoka'),
+        getData('/exam-fukuoka'),
+      ]);
+      store = {
+        summary: summary[0],
+        patients,
+        askCenter,
+        exam,
+      };
+    } else {
+      const [summary, patients, askCenter, exam] = await Promise.all([
+        getData('/summary'),
+        getData('/patients'),
+        getData('/askCenter'),
+        getData('/exam'),
+      ]);
+      store = {
+        summary: summary[0],
+        patients,
+        askCenter,
+        exam,
+      };
+    }
+
+    const acceptLang = req.acceptsLanguages([
+      'zh-TW',
+      'ja',
+      'en-US',
+      'en-UK',
+      'ja-JP',
+      'zh-CN',
     ]);
-
-    const store = {
-      summary: summary[0],
-      patients,
-      askCenter,
-      exam,
-    };
-
-    const acceptLang = req.acceptsLanguages(['zh-TW', 'ja', 'en-US', 'en-UK']);
     const lang = {
       'zh-TW': tw,
       'zh-CN': tw,
       hant: tw,
       ja: ja,
+      'ja-JP': ja,
+      jp: ja,
       en: en,
       'en-UK': en,
       'en-US': en,

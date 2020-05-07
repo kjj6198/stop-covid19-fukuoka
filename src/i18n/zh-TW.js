@@ -5,6 +5,8 @@ const translation = {
       '本網站追蹤並顯示福岡縣新型冠狀肺炎感染的相關情報，目前共有 ({0}) 位感染者',
   },
   common: {
+    fukuoka: '切換到福岡市',
+    fukuokaPerf: '顯示福岡縣的資料',
     total: '合計',
     official: '連結',
     languages: '語言',

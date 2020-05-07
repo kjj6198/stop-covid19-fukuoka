@@ -133,7 +133,8 @@
         <img alt="covid-19" src="/favicon.png" />
         {$t('title')}
       </h1>
-
+      <ExternalLink href="/?q=fukuoka" title={$t('common.fukuoka')} />
+      <ExternalLink href="/" title={$t('common.fukuokaPerf')} />
       <p>
         {$t('common.notice')}
         <ExternalLink

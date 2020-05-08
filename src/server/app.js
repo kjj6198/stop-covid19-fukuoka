@@ -6,7 +6,7 @@ const app = express();
 // I don't know why standard app engine env doesn't support gzip...
 const compression = require('compression');
 const { readable } = require('svelte/store');
-const { createTranslation, createLocale } = require('../stores/locale');
+const { createTranslation, createLocale } = require('svelte-intl2');
 const AppComponent = require('../App.svelte').default;
 const getData = require('./getData');
 const { ja, tw, en } = require('../i18n');

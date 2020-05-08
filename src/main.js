@@ -1,6 +1,6 @@
 import App from './App.svelte';
 import store from './stores/data';
-import { createLocale, createTranslation } from './stores/locale';
+import { createLocale, createTranslation } from 'svelte-intl2';
 
 // sync $store from window.store
 // sync locale from window.locale

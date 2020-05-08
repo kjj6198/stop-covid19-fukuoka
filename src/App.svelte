@@ -97,6 +97,10 @@
       width: 30px;
     }
   }
+
+  .cover {
+    max-width: 100%;
+  }
 </style>
 
 <svelte:head>
@@ -129,7 +133,10 @@
       <Navbar />
     </nav>
     <main>
-      <img src="/images/cover.jpg" alt="Fukuoka COVID-19 Information" />
+      <img
+        class="cover"
+        src="/images/cover.jpg"
+        alt="Fukuoka COVID-19 Information" />
       <h1>
         <img alt="covid-19" src="/favicon.png" />
         {$t('title')}

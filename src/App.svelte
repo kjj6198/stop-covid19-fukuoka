@@ -129,6 +129,7 @@
       <Navbar />
     </nav>
     <main>
+      <img src="/images/cover.jpg" alt="Fukuoka COVID-19 Information" />
       <h1>
         <img alt="covid-19" src="/favicon.png" />
         {$t('title')}

@@ -2,5 +2,6 @@ service: default
 runtime: nodejs10
 env: standard
 
+# stop using CDN for now, investigate cache header.
 env_variables:
-  CDN_URL: https://d2c4jkl18wvl8p.cloudfront.net
+  CDN_URL: https://fukuoka-covid.s3-ap-northeast-1.amazonaws.com

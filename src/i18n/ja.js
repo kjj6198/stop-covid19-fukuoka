@@ -15,7 +15,7 @@ const translation = {
     case: '件',
     people: '人',
     footer:
-      'このサイトは<a href="https://twitter.com/kalanyei">Kalan</a>から作りました。役に立てると幸いです。<a href="https://github.com/kjj6198/fukuoka-covid">Github</a>',
+      'このサイトは<a href="https://twitter.com/kalanyei">Kalan</a>から作りました。役に立てると幸いです。<a href="https://github.com/kjj6198/stop-covid19-fukuoka">Github</a>',
   },
   link: {
     title: '重要事項とリンク先',

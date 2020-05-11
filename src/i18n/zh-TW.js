@@ -15,7 +15,7 @@ const translation = {
     case: '件',
     people: '人',
     footer:
-      '這個網站是由<a href="https://twitter.com/kalanyei">愷開</a>製作。如果覺得有幫助的話請分享給更多人知道，有任何問題歡迎到 Twitter 上或是一起到 <a href="https://github.com/kjj6198/fukuoka-covid">Github</a> 修正問題，謝謝！',
+      '這個網站是由<a href="https://twitter.com/kalanyei">愷開</a>製作。如果覺得有幫助的話請分享給更多人知道，有任何問題歡迎到 Twitter 上或是一起到 <a href="https://github.com/kjj6198/stop-covid19-fukuoka/">Github</a> 修正問題，謝謝！',
   },
   link: {
     title: '重要通知與相關連結',

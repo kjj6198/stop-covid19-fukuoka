@@ -229,26 +229,6 @@
             href="https://ckan.open-governmentdata.org/dataset/401000_pref_fukuoka_covid19_exam/resource/aab43191-40d0-4a6a-9724-a9030a596009" />
         </div>
       </ChartContainer>
-
-      <ChartContainer title={$t('askCenter.title')}>
-        <div slot="content">
-          <Chart
-            overflow
-            yAccessor={(d) => +d.case}
-            tooltipFormat={(d) => `${formatNumber(+d.case)}${$t('common.case')}`}
-            xTicks={[...new Set($store.askCenter.data.map((d) => d.publishedAt))]}
-            xTickFormat={(d) => d.replace('2020/', '')}
-            yTicks={[0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000]}
-            barWidth={9}
-            data={$store.askCenter.data} />
-        </div>
-        <div slot="footer">
-          <ExternalLink
-            title={$t('data.askCenter')}
-            href="https://ckan.open-governmentdata.org/dataset/401000_pref_fukuoka_covid19_kikokusyasessyokusya" />
-        </div>
-      </ChartContainer>
-
     </main>
     <footer>
       <div class="footer-logos">

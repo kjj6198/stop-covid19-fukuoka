@@ -34,29 +34,25 @@ app.get('/', async (req, res, next) => {
     let store = {};
 
     if (q === 'fukuoka') {
-      const [summary, patients, askCenter, exam] = await Promise.all([
+      const [summary, patients, exam] = await Promise.all([
         getData('/summary-fukuoka'),
         getData('/patients-fukuoka'),
-        getData('/askCenter-fukuoka'),
         getData('/exam-fukuoka'),
       ]);
       store = {
         summary: summary[0],
         patients,
-        askCenter,
         exam,
       };
     } else {
-      const [summary, patients, askCenter, exam] = await Promise.all([
+      const [summary, patients, exam] = await Promise.all([
         getData('/summary'),
         getData('/patients'),
-        getData('/askCenter'),
         getData('/exam'),
       ]);
       store = {
         summary: summary[0],
         patients,
-        askCenter,
         exam,
       };
     }

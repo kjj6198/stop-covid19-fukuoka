@@ -6,7 +6,7 @@
   import Navbar from './Navbar.svelte';
   import ChartContainer from './ChartContainer.svelte';
   import TopSummaryStat from './TopSummaryStat.svelte';
-  import Table from 'svelte-data-tabu/src/Table/Table.svelte';
+  import Table from './Table/Table.svelte';
   import ExternalLink from './ExternalLink.svelte';
   import Tab from './Tab.svelte';
   import { createDetail } from './config';
@@ -199,7 +199,6 @@
         <div slot="content" style={`height: 500px; overflow-y: auto`}>
           <!-- since data becomes larger and larger, you might want to add paging...  -->
           <Table
-            pinToTop
             data={$store.patients.data}
             config={createDetail($t)}
             title={$t('infectionDetail.title')}>

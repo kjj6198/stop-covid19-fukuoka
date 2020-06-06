@@ -15,7 +15,7 @@ const createDetail = (t) => {
       name: t('infectionDetail.publishedAt'),
       type: 'text',
       sortable: true,
-      comparator: (a, b) => new Date(a).getTime() - new Date(b).getTime(),
+      comparator: (a, b) => new Date(b).getTime() - new Date(a).getTime(),
     },
     gender: {
       name: t('infectionDetail.gender'),

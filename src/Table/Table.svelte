@@ -5,7 +5,6 @@
   export let config;
   export let data;
   export let title;
-  export let striped;
   let sortType = null;
   $: tableHeads = Object.keys(config);
   $: originalData = data.slice();
@@ -75,7 +74,7 @@
     background-color: #ddd;
   }
 
-  .striped > .tr:nth-child(even) {
+  .tr:nth-child(even) {
     background-color: #efefef;
   }
 </style>
@@ -101,7 +100,7 @@
       {/each}
     </tr>
   </thead>
-  <tbody class:striped>
+  <tbody>
     {#each sortedData || data as item, i}
       <tr class="tr">
         {#each Object.keys(config) as itemKey}

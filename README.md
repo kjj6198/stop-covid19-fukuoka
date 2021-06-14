@@ -1,3 +1,9 @@
+**DEPRECATED**
+
+Originally I thought Covid-19 will be ended within serveral months, it turns out in 2021/06, pandemic is still here. This simple app is not intended to be large-scale, I decided to close the website and only code is available.
+
+Please refer to official govenment website to get the correct information
+
 # Fukuoka COVID-19 Information ![Build and Deploy to App Engine](https://github.com/kjj6198/stop-covid19-fukuoka/workflows/Build%20and%20Deploy%20to%20App%20Engine/badge.svg?branch=master&event=push)
 
 ## How to run
